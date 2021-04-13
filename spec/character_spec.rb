@@ -43,9 +43,9 @@ describe Character do
   end
 
   it "can chain-build associations to which it belongs" do
-    malcolm = Character.new(name: "Malcolm Reynolds")
-    malcolm.build_show(name: "Firefly").build_network(:call_letters => "Fox")
-    show = malcolm.show
+    malcome = Character.new(name: "Malcome Reynolds")
+    malcome.build_show(name: "Firefly").build_network(:call_letters => "Fox")
+    show = malcome.show
     expect(show.name).to eq("Firefly")
     expect(show.network.call_letters).to eq("Fox")
   end
