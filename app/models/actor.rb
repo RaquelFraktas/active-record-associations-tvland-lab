@@ -9,11 +9,9 @@ class Actor < ActiveRecord::Base
     end
 
     def list_roles
-    
-        self.map do |character|
-           " #{character.full_name} - #{character.shows}"
+        self.characters.map do |character|
+           "#{character.name} - #{character.show.name}"
         end
-        
     end
 
 end
